@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const genres = require("./routes/genres");
-// const customers = require("./routes/customers");
+const customers = require("./routes/customers");
 
 mongoose
   .connect("mongodb://localhost/vidly", {
@@ -14,6 +14,6 @@ mongoose
 const app = express();
 app.use(express.json());
 app.use("/api/genres", genres);
-// app.use("/api/customers", customers);
+app.use("/api/customers", customers);
 
 app.listen(3001, () => console.log("Listening on port 3001..."));
