@@ -42,5 +42,5 @@ function validateMovie(movie) {
   return Joi.validate(movie, schema);
 }
 
-exports.Customer = Movie;
+exports.Movie = Movie;
 exports.validate = validateMovie;
